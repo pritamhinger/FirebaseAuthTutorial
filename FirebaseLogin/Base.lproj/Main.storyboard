@@ -116,6 +116,9 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bjq-EJ-oQK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VN2-vq-ZBS">
                                 <rect key="frame" x="132" y="593" width="111" height="30"/>
@@ -140,6 +143,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.95117908716201782" green="0.69430768489837646" blue="0.092136718332767487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="4Nf-x7-t0b" id="APj-7s-vyW"/>
+                        <outlet property="passwordTextField" destination="z4p-Pf-jhc" id="zWw-Ce-WS3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -245,6 +252,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="YfM-r9-eyt"/>
         <segue reference="tlf-ne-YRd"/>
-        <segue reference="lmL-5b-DbV"/>
+        <segue reference="dzx-Xf-Chq"/>
     </inferredMetricsTieBreakers>
 </document>
