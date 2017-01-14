@@ -87,7 +87,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SignUpViewController" customModule="FirebaseLogin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUp" id="BYZ-38-t0r" customClass="SignUpViewController" customModule="FirebaseLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -246,6 +246,9 @@
                                 <state key="normal" title="Log out">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="logout:" destination="K8P-8R-Jg4" eventType="touchUpInside" id="d9i-Nu-7kz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -257,8 +260,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="9Bs-XW-iXa"/>
-        <segue reference="dzx-Xf-Chq"/>
+        <segue reference="YfM-r9-eyt"/>
         <segue reference="nF6-Iy-MWj"/>
+        <segue reference="dzx-Xf-Chq"/>
     </inferredMetricsTieBreakers>
 </document>
