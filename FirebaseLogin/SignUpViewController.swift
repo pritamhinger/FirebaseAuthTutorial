@@ -12,19 +12,11 @@ import FirebaseAuth
 
 class SignUpViewController: UIViewController {
 
+    // MARK: - IBOutlets
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    // MARK: - IBActions
     @IBAction func createAccount(_ sender: Any) {
         if emailTextField.text == "" || passwordTextField.text == ""{
             let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)
