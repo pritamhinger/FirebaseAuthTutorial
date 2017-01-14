@@ -191,6 +191,9 @@
                                 <state key="normal" title="Reset Password">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="resetPassword:" destination="DxB-uK-qaG" eventType="touchUpInside" id="hgh-H6-xdn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VrJ-XG-Ahx">
                                 <rect key="frame" x="152" y="579" width="71" height="30"/>
@@ -215,6 +218,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="FAC-kU-MXe" id="cZB-6U-LSH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cfV-Uv-GcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -261,7 +267,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="YfM-r9-eyt"/>
-        <segue reference="nF6-Iy-MWj"/>
+        <segue reference="tlf-ne-YRd"/>
         <segue reference="dzx-Xf-Chq"/>
     </inferredMetricsTieBreakers>
 </document>
