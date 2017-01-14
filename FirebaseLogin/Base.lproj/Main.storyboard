@@ -209,7 +209,7 @@
         <!--Home View Controller-->
         <scene sceneID="vih-Et-E9K">
             <objects>
-                <viewController id="K8P-8R-Jg4" customClass="HomeViewController" customModule="FirebaseLogin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="K8P-8R-Jg4" customClass="HomeViewController" customModule="FirebaseLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RHu-rE-Vte"/>
                         <viewControllerLayoutGuide type="bottom" id="JWC-gF-gV5"/>

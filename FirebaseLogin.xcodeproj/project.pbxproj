@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4831994C1E2A88FD0074E87F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4831994B1E2A88FD0074E87F /* GoogleService-Info.plist */; };
 		48F420151E29ED0400A2830D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F420141E29ED0400A2830D /* AppDelegate.swift */; };
 		48F420171E29ED0400A2830D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F420161E29ED0400A2830D /* SignUpViewController.swift */; };
 		48F4201A1E29ED0400A2830D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48F420181E29ED0400A2830D /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4831994B1E2A88FD0074E87F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		48F420111E29ED0400A2830D /* FirebaseLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48F420141E29ED0400A2830D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48F420161E29ED0400A2830D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 		48F420131E29ED0400A2830D /* FirebaseLogin */ = {
 			isa = PBXGroup;
 			children = (
+				4831994B1E2A88FD0074E87F /* GoogleService-Info.plist */,
 				48F420141E29ED0400A2830D /* AppDelegate.swift */,
 				48F420161E29ED0400A2830D /* SignUpViewController.swift */,
 				48F420181E29ED0400A2830D /* Main.storyboard */,
@@ -245,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48F4201F1E29ED0400A2830D /* LaunchScreen.storyboard in Resources */,
+				4831994C1E2A88FD0074E87F /* GoogleService-Info.plist in Resources */,
 				48F4201C1E29ED0400A2830D /* Assets.xcassets in Resources */,
 				48F4201A1E29ED0400A2830D /* Main.storyboard in Resources */,
 			);
@@ -524,6 +528,7 @@
 				48F4203B1E29ED0400A2830D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		48F4203C1E29ED0400A2830D /* Build configuration list for PBXNativeTarget "FirebaseLoginTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +537,7 @@
 				48F4203E1E29ED0400A2830D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		48F4203F1E29ED0400A2830D /* Build configuration list for PBXNativeTarget "FirebaseLoginUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +546,7 @@
 				48F420411E29ED0400A2830D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
