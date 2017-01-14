@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		48F420151E29ED0400A2830D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F420141E29ED0400A2830D /* AppDelegate.swift */; };
-		48F420171E29ED0400A2830D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F420161E29ED0400A2830D /* ViewController.swift */; };
+		48F420171E29ED0400A2830D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F420161E29ED0400A2830D /* SignUpViewController.swift */; };
 		48F4201A1E29ED0400A2830D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48F420181E29ED0400A2830D /* Main.storyboard */; };
 		48F4201C1E29ED0400A2830D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48F4201B1E29ED0400A2830D /* Assets.xcassets */; };
 		48F4201F1E29ED0400A2830D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48F4201D1E29ED0400A2830D /* LaunchScreen.storyboard */; };
 		48F4202A1E29ED0400A2830D /* FirebaseLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F420291E29ED0400A2830D /* FirebaseLoginTests.swift */; };
 		48F420351E29ED0400A2830D /* FirebaseLoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F420341E29ED0400A2830D /* FirebaseLoginUITests.swift */; };
+		48F420431E2A83D700A2830D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F420421E2A83D700A2830D /* LoginViewController.swift */; };
+		48F420451E2A83FD00A2830D /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F420441E2A83FD00A2830D /* ResetPasswordViewController.swift */; };
+		48F420471E2A841400A2830D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F420461E2A841400A2830D /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		48F420111E29ED0400A2830D /* FirebaseLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48F420141E29ED0400A2830D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		48F420161E29ED0400A2830D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		48F420161E29ED0400A2830D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		48F420191E29ED0400A2830D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48F4201B1E29ED0400A2830D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48F4201E1E29ED0400A2830D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		48F420301E29ED0400A2830D /* FirebaseLoginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirebaseLoginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48F420341E29ED0400A2830D /* FirebaseLoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoginUITests.swift; sourceTree = "<group>"; };
 		48F420361E29ED0400A2830D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48F420421E2A83D700A2830D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		48F420441E2A83FD00A2830D /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		48F420461E2A841400A2830D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +104,14 @@
 			isa = PBXGroup;
 			children = (
 				48F420141E29ED0400A2830D /* AppDelegate.swift */,
-				48F420161E29ED0400A2830D /* ViewController.swift */,
+				48F420161E29ED0400A2830D /* SignUpViewController.swift */,
 				48F420181E29ED0400A2830D /* Main.storyboard */,
 				48F4201B1E29ED0400A2830D /* Assets.xcassets */,
 				48F4201D1E29ED0400A2830D /* LaunchScreen.storyboard */,
 				48F420201E29ED0400A2830D /* Info.plist */,
+				48F420421E2A83D700A2830D /* LoginViewController.swift */,
+				48F420441E2A83FD00A2830D /* ResetPasswordViewController.swift */,
+				48F420461E2A841400A2830D /* HomeViewController.swift */,
 			);
 			path = FirebaseLogin;
 			sourceTree = "<group>";
@@ -262,8 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48F420171E29ED0400A2830D /* ViewController.swift in Sources */,
+				48F420471E2A841400A2830D /* HomeViewController.swift in Sources */,
+				48F420431E2A83D700A2830D /* LoginViewController.swift in Sources */,
+				48F420171E29ED0400A2830D /* SignUpViewController.swift in Sources */,
 				48F420151E29ED0400A2830D /* AppDelegate.swift in Sources */,
+				48F420451E2A83FD00A2830D /* ResetPasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
