@@ -41,7 +41,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28q-hP-RvI">
-                                <rect key="frame" x="169" y="394.5" width="38" height="30"/>
+                                <rect key="frame" x="169" y="394" width="38" height="30"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -67,10 +67,26 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="nF6-Iy-MWj"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SvC-85-Agf" customClass="GIDSignInButton">
+                                <rect key="frame" x="16" y="84" width="343" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="wyh-DX-XFL"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Im8-fY-2eg" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="16" y="150" width="343" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="EMe-Or-UYR"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="7Fb-sN-Okp" firstAttribute="trailing" secondItem="LTh-sN-eQo" secondAttribute="trailing" id="2Uj-Zb-tN7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SvC-85-Agf" secondAttribute="trailing" id="9Iv-5B-jc1"/>
+                            <constraint firstItem="Im8-fY-2eg" firstAttribute="leading" secondItem="SvC-85-Agf" secondAttribute="leading" id="AOx-i6-ijH"/>
                             <constraint firstItem="28q-hP-RvI" firstAttribute="top" secondItem="7Fb-sN-Okp" secondAttribute="bottom" constant="8" id="Aty-D3-CZL"/>
                             <constraint firstItem="mwI-sC-vg3" firstAttribute="top" secondItem="HzL-iJ-06j" secondAttribute="bottom" constant="8" id="IXa-cT-WMj"/>
                             <constraint firstItem="7Fb-sN-Okp" firstAttribute="top" secondItem="LTh-sN-eQo" secondAttribute="bottom" constant="8" id="MaB-8d-aMG"/>
@@ -79,16 +95,22 @@
                             <constraint firstItem="exB-hp-2QV" firstAttribute="centerX" secondItem="Npc-0u-su8" secondAttribute="centerX" id="UF9-H6-MmJ"/>
                             <constraint firstItem="HzL-iJ-06j" firstAttribute="centerX" secondItem="mwI-sC-vg3" secondAttribute="centerX" id="UKM-0m-vWQ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="LTh-sN-eQo" secondAttribute="leading" id="Xrk-g2-hY4"/>
+                            <constraint firstItem="Im8-fY-2eg" firstAttribute="top" secondItem="SvC-85-Agf" secondAttribute="bottom" constant="18" id="ZNF-Cd-gOA"/>
                             <constraint firstItem="7Fb-sN-Okp" firstAttribute="leading" secondItem="LTh-sN-eQo" secondAttribute="leading" id="bbN-IM-px5"/>
+                            <constraint firstItem="Im8-fY-2eg" firstAttribute="trailing" secondItem="SvC-85-Agf" secondAttribute="trailing" id="gtb-yp-ItP"/>
                             <constraint firstItem="28q-hP-RvI" firstAttribute="centerX" secondItem="exB-hp-2QV" secondAttribute="centerX" id="lWB-If-eLI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LTh-sN-eQo" secondAttribute="trailing" id="oL2-x5-cuI"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="SvC-85-Agf" secondAttribute="leading" id="pZQ-bS-Ub2"/>
                             <constraint firstItem="9Fp-qG-sY5" firstAttribute="top" secondItem="mwI-sC-vg3" secondAttribute="bottom" constant="20" id="rSl-5q-Bf2"/>
                             <constraint firstItem="mwI-sC-vg3" firstAttribute="centerX" secondItem="exB-hp-2QV" secondAttribute="centerX" id="tZZ-tb-dkz"/>
+                            <constraint firstItem="SvC-85-Agf" firstAttribute="top" secondItem="exB-hp-2QV" secondAttribute="bottom" constant="8" id="vrd-ID-pq3"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="LTh-sN-eQo" id="8Wz-yB-Tmj"/>
+                        <outlet property="fbLoginButton" destination="Im8-fY-2eg" id="MtF-Ib-tdA"/>
                         <outlet property="passwordTextField" destination="7Fb-sN-Okp" id="fTm-ie-l2v"/>
+                        <outlet property="signInButton" destination="SvC-85-Agf" id="Pgb-vn-7bt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uXS-0l-uBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -305,8 +327,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YfM-r9-eyt"/>
         <segue reference="nF6-Iy-MWj"/>
         <segue reference="dzx-Xf-Chq"/>
+        <segue reference="9Bs-XW-iXa"/>
     </inferredMetricsTieBreakers>
 </document>

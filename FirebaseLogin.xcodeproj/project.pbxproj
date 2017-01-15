@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4831994C1E2A88FD0074E87F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4831994B1E2A88FD0074E87F /* GoogleService-Info.plist */; };
+		487957B21E2BD7EB00EB8230 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487957B11E2BD7EB00EB8230 /* FBSDKLoginKit.framework */; };
+		487957B41E2BD85000EB8230 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487957B31E2BD85000EB8230 /* FBSDKCoreKit.framework */; };
+		487957B61E2BDD3900EB8230 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487957B51E2BDD3900EB8230 /* Bolts.framework */; };
 		48F420151E29ED0400A2830D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F420141E29ED0400A2830D /* AppDelegate.swift */; };
 		48F420171E29ED0400A2830D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F420161E29ED0400A2830D /* SignUpViewController.swift */; };
 		48F4201A1E29ED0400A2830D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48F420181E29ED0400A2830D /* Main.storyboard */; };
@@ -46,6 +49,10 @@
 		2BA3BEF81BA1CD928C8B11C7 /* Pods-FirebaseLoginTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLoginTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseLoginTests/Pods-FirebaseLoginTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3C7C5758DC018EF57D9EC1D8 /* Pods_FirebaseLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4831994B1E2A88FD0074E87F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		487957B11E2BD7EB00EB8230 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		487957B31E2BD85000EB8230 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		487957B51E2BDD3900EB8230 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		487957B71E2BE2BD00EB8230 /* FirebaseLogin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirebaseLogin.entitlements; sourceTree = "<group>"; };
 		48F420111E29ED0400A2830D /* FirebaseLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48F420141E29ED0400A2830D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48F420161E29ED0400A2830D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -74,7 +81,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				487957B21E2BD7EB00EB8230 /* FBSDKLoginKit.framework in Frameworks */,
+				487957B41E2BD85000EB8230 /* FBSDKCoreKit.framework in Frameworks */,
 				F80CC57B837730760ECF34EB /* Pods_FirebaseLogin.framework in Frameworks */,
+				487957B61E2BDD3900EB8230 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +107,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		487957B01E2BD7D200EB8230 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				487957B51E2BDD3900EB8230 /* Bolts.framework */,
+				487957B31E2BD85000EB8230 /* FBSDKCoreKit.framework */,
+				487957B11E2BD7EB00EB8230 /* FBSDKLoginKit.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
 		48F420081E29ED0400A2830D = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +142,8 @@
 		48F420131E29ED0400A2830D /* FirebaseLogin */ = {
 			isa = PBXGroup;
 			children = (
+				487957B71E2BE2BD00EB8230 /* FirebaseLogin.entitlements */,
+				487957B01E2BD7D200EB8230 /* Framework */,
 				4831994B1E2A88FD0074E87F /* GoogleService-Info.plist */,
 				48F420141E29ED0400A2830D /* AppDelegate.swift */,
 				48F420161E29ED0400A2830D /* SignUpViewController.swift */,
@@ -256,6 +278,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = QK5A5T3HGQ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					48F420241E29ED0400A2830D = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -617,7 +644,12 @@
 			baseConfigurationReference = F4ED61B2A1C80CB641AFA3AF /* Pods-FirebaseLogin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FirebaseLogin/FirebaseLogin.entitlements;
 				DEVELOPMENT_TEAM = QK5A5T3HGQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FirebaseLogin",
+				);
 				INFOPLIST_FILE = FirebaseLogin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appdevelapp.FirebaseLogin;
@@ -631,7 +663,12 @@
 			baseConfigurationReference = F871CB276E13873523AE093E /* Pods-FirebaseLogin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FirebaseLogin/FirebaseLogin.entitlements;
 				DEVELOPMENT_TEAM = QK5A5T3HGQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FirebaseLogin",
+				);
 				INFOPLIST_FILE = FirebaseLogin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appdevelapp.FirebaseLogin;

@@ -9,12 +9,26 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import GoogleSignIn
+import FBSDKLoginKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDelegate {
 
     // MARK: - IBoutlets
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var signInButton: GIDSignInButton!
+    @IBOutlet weak var fbLoginButton: FBSDKLoginButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        GIDSignIn.sharedInstance().uiDelegate = self
+        //GIDSignIn.sharedInstance().signIn()
+        fbLoginButton.delegate = self
+        fbLoginButton.readPermissions = ["public_profile","email","user_friends"]
+        signInButton.colorScheme = GIDSignInButtonColorScheme.light
+        signInButton.style = GIDSignInButtonStyle.standard
+    }
     
     // MARK: - IBActions
     @IBAction func login(_ sender: Any) {
@@ -39,5 +53,18 @@ class LoginViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        if error == nil{
+            print("Token from FB is \(result.token.tokenString)")
+        }
+        else{
+            print(error.localizedDescription)
+        }
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        FBSDKLoginManager().logOut()
     }
 }
