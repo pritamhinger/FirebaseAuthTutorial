@@ -12,7 +12,7 @@ import FirebaseAuth
 import GoogleSignIn
 import FBSDKLoginKit
 
-class LoginViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDelegate {
+class LoginViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButtonDelegate, GIDSignInDelegate {
 
     // MARK: - IBoutlets
     @IBOutlet weak var passwordTextField: UITextField!
@@ -23,6 +23,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButt
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().delegate = self
         //GIDSignIn.sharedInstance().signIn()
         fbLoginButton.delegate = self
         fbLoginButton.readPermissions = ["public_profile","email","user_friends"]
@@ -58,6 +59,18 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButt
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         if error == nil{
             print("Token from FB is \(result.token.tokenString)")
+            let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+            FIRAuth.auth()?.signIn(with: credential){ (user, error) in
+                if let error = error{
+                    print(error.localizedDescription)
+                    FBSDKLoginManager().logOut()
+                    return;
+                }
+                else{
+                    let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                    self.present(homeViewController!, animated: true, completion: nil)
+                }
+            }
         }
         else{
             print(error.localizedDescription)
@@ -66,5 +79,35 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, FBSDKLoginButt
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         FBSDKLoginManager().logOut()
+    }
+    
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error{
+            print(error.localizedDescription)
+            return
+        }
+        
+        guard let authentication = user.authentication else { return }
+        
+        let credential = FIRGoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        
+        print(credential.provider)
+        
+        FIRAuth.auth()?.signIn(with: credential){ (user, error) in
+            if let error = error{
+                print(error.localizedDescription)
+                GIDSignIn().signOut()
+                return
+            }
+            else{
+                let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                self.present(homeViewController!, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        GIDSignIn().signOut()
     }
 }
