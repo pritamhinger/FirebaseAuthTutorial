@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4831994C1E2A88FD0074E87F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4831994B1E2A88FD0074E87F /* GoogleService-Info.plist */; };
+		48781BC41E2E70EC0008C28F /* LoginProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48781BC31E2E70EC0008C28F /* LoginProviderViewController.swift */; };
+		48781BC71E2E7C820008C28F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48781BC61E2E7C820008C28F /* User.swift */; };
+		48781BC91E2E7E1F0008C28F /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48781BC81E2E7E1F0008C28F /* AuthProvider.swift */; };
 		487957B21E2BD7EB00EB8230 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487957B11E2BD7EB00EB8230 /* FBSDKLoginKit.framework */; };
 		487957B41E2BD85000EB8230 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487957B31E2BD85000EB8230 /* FBSDKCoreKit.framework */; };
 		487957B61E2BDD3900EB8230 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487957B51E2BDD3900EB8230 /* Bolts.framework */; };
@@ -49,6 +52,9 @@
 		2BA3BEF81BA1CD928C8B11C7 /* Pods-FirebaseLoginTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLoginTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseLoginTests/Pods-FirebaseLoginTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3C7C5758DC018EF57D9EC1D8 /* Pods_FirebaseLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FirebaseLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4831994B1E2A88FD0074E87F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		48781BC31E2E70EC0008C28F /* LoginProviderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginProviderViewController.swift; sourceTree = "<group>"; };
+		48781BC61E2E7C820008C28F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		48781BC81E2E7E1F0008C28F /* AuthProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
 		487957B11E2BD7EB00EB8230 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		487957B31E2BD85000EB8230 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		487957B51E2BDD3900EB8230 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -107,6 +113,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48781BC51E2E7C690008C28F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				48781BC61E2E7C820008C28F /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		48781BCA1E2E7E9D0008C28F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				48781BC81E2E7E1F0008C28F /* AuthProvider.swift */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		487957B01E2BD7D200EB8230 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +164,8 @@
 		48F420131E29ED0400A2830D /* FirebaseLogin */ = {
 			isa = PBXGroup;
 			children = (
+				48781BCA1E2E7E9D0008C28F /* Common */,
+				48781BC51E2E7C690008C28F /* Model */,
 				487957B71E2BE2BD00EB8230 /* FirebaseLogin.entitlements */,
 				487957B01E2BD7D200EB8230 /* Framework */,
 				4831994B1E2A88FD0074E87F /* GoogleService-Info.plist */,
@@ -154,6 +178,7 @@
 				48F420421E2A83D700A2830D /* LoginViewController.swift */,
 				48F420441E2A83FD00A2830D /* ResetPasswordViewController.swift */,
 				48F420461E2A841400A2830D /* HomeViewController.swift */,
+				48781BC31E2E70EC0008C28F /* LoginProviderViewController.swift */,
 			);
 			path = FirebaseLogin;
 			sourceTree = "<group>";
@@ -491,9 +516,12 @@
 			files = (
 				48F420471E2A841400A2830D /* HomeViewController.swift in Sources */,
 				48F420431E2A83D700A2830D /* LoginViewController.swift in Sources */,
+				48781BC91E2E7E1F0008C28F /* AuthProvider.swift in Sources */,
 				48F420171E29ED0400A2830D /* SignUpViewController.swift in Sources */,
 				48F420151E29ED0400A2830D /* AppDelegate.swift in Sources */,
 				48F420451E2A83FD00A2830D /* ResetPasswordViewController.swift in Sources */,
+				48781BC41E2E70EC0008C28F /* LoginProviderViewController.swift in Sources */,
+				48781BC71E2E7C820008C28F /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
