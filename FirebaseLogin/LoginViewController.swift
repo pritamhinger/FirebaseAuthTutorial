@@ -32,29 +32,11 @@ class LoginViewController: UIViewController {
             FIRAuth.auth()?.signIn(withEmail: emailTextField.text!, password: passwordTextField.text!){ (user, error) in
                 if error == nil{
                     if let firebaseUser = user! as FIRUser!{
-                        if let displayUserName = firebaseUser.displayName{
-                            print(displayUserName)
-                        }
-                        
-                        if let email = firebaseUser.email{
-                            print(email)
-                        }
-                        
-                        print(firebaseUser.isAnonymous)
-                        if let url = firebaseUser.photoURL{
-                            print(url)
-                        }
-                        
-                        print(firebaseUser.isEmailVerified)
-                        print(firebaseUser.providerID)
-                        print(firebaseUser.uid)
-                        
+                        let loggedInUser = User(firebaseUser: firebaseUser, authProvider: AuthProvider.EmailAddress)
+                        print(loggedInUser)
                     }
                     print("You have successfully logged in.")
-                    let loggedInUser = User()
-                    loggedInUser.emailAddress = self.emailTextField.text!
-                    loggedInUser.authProvider = AuthProvider.EmailAddress
-                    loggedInUser.userName = self.emailTextField.text!
+                    
                     let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: "Home")
                     self.present(homeViewController!, animated: true, completion: nil)
                 }
