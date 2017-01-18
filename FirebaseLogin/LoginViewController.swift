@@ -34,6 +34,7 @@ class LoginViewController: UIViewController {
                     if let firebaseUser = user! as FIRUser!{
                         let loggedInUser = User(firebaseUser: firebaseUser, authProvider: AuthProvider.EmailAddress)
                         print(loggedInUser)
+                        FirebaseLoginHelper.sharedInstance.saveLoggedInUser(user: loggedInUser)
                     }
                     print("You have successfully logged in.")
                     

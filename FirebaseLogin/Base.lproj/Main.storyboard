@@ -362,10 +362,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are logged in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXr-Ks-dKQ">
-                                <rect key="frame" x="16" y="323" width="343" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are logged in" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXr-Ks-dKQ">
+                                <rect key="frame" x="16" y="302" width="343" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="9Ch-2l-mmI"/>
+                                    <constraint firstAttribute="height" constant="63" id="rsh-bQ-hu0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -390,6 +391,9 @@
                             <constraint firstItem="aGK-g5-MQ9" firstAttribute="centerX" secondItem="0MO-oT-MXJ" secondAttribute="centerX" id="dqp-Kn-Mp9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="logInStatus" destination="YXr-Ks-dKQ" id="adH-5g-twW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IIJ-OS-dzo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,6 +11,19 @@ import Firebase
 import FirebaseAuth
 
 class HomeViewController: UIViewController {
+    
+    
+    @IBOutlet weak var logInStatus: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if let user = FirebaseLoginHelper.sharedInstance.getLoggedInUser(){
+            logInStatus.text = "Welcome, \(user.emailAddress)"
+        }
+        else{
+            logInStatus.text = "Welcome, Anonymous User"
+        }
+    }
 
     // MARK: - IBActions
     @IBAction func logout(_ sender: Any) {
